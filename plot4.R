@@ -34,7 +34,7 @@ par(mfrow = c(2, 2), cex=0.7)
 # First
 with(data, plot(datetime, global_active_power, type='n',
                 xlab='',
-                ylab='Global Active Power (kilowatts)'))
+                ylab='Global Active Power'))
 with(data, lines(datetime, global_active_power))
 
 # Second
