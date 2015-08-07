@@ -64,6 +64,6 @@ with(data, lines(datetime, global_reactive_power))
 
 # Save the plot into a file
 dev.copy(png, filename="plot4.png");
-dev.off ();
+dev.off();
 
 cat('Done\n')

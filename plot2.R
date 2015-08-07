@@ -26,7 +26,10 @@ colnames(data) <- tolower(colnames(data))
 
 # Set locale so we have correct wday labels
 Sys.setlocale(category = "LC_ALL", locale = "English_United States.1252")
+
 # Make the plot
+par(mfrow=c(1,1), cex=0.8)
+
 with(data, plot(datetime, global_active_power, type='n',
                 xlab='',
                 ylab='Global Active Power (kilowatts)'))
@@ -34,6 +37,6 @@ with(data, lines(datetime, global_active_power))
 
 # Save the plot into a file
 dev.copy(png, filename="plot2.png");
-dev.off ();
+dev.off();
 
 cat('Done\n')

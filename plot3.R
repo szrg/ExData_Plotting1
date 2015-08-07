@@ -26,7 +26,10 @@ colnames(data) <- tolower(colnames(data))
 
 # Set locale so we have correct wday labels
 Sys.setlocale(category = "LC_ALL", locale = "English_United States.1252")
+
 # Make the plot
+par(mfrow=c(1,1), cex=0.8)
+
 with(data, plot(rep(datetime, times=3),
                 c(data$sub_metering_1, data$sub_metering_2, data$sub_metering_3),
                 type='n',
@@ -44,6 +47,6 @@ legend('topright',
 
 # Save the plot into a file
 dev.copy(png, filename="plot3.png");
-dev.off ();
+dev.off();
 
 cat('Done\n')

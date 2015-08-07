@@ -25,12 +25,14 @@ rownames(data) <- 1:nrow(data)
 colnames(data) <- tolower(colnames(data))
 
 # Make the plot
+par(mfrow=c(1,1), cex=0.8)
+
 with(data, hist(global_active_power, col="red", 
                 xlab='Global Active Power (kilowatts)',
                 main='Global Active Power'))
 
 # Save the plot into a file
 dev.copy(png, filename="plot1.png");
-dev.off ();
+dev.off();
 
 cat('Done\n')
