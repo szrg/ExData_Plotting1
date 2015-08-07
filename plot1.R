@@ -28,6 +28,7 @@ colnames(data) <- tolower(colnames(data))
 with(data, hist(global_active_power, col="red", 
                 xlab='Global Active Power (kilowatts)',
                 main='Global Active Power'))
+
 # Save the plot into a file
 dev.copy(png, filename="plot1.png");
 dev.off ();
